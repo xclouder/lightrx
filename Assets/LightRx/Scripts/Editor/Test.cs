@@ -11,9 +11,10 @@ public class Test {
 	public void TestSimplePasses()
 	{
 		
-		var intValOb = new TestIntObservable(0);
+		var intValOb = new TestIntObservable(6);
 		
 		var disposable = intValOb.Where(val => val > 1)
+			.Select(val => val + ".tostring")
 			.Subscribe(msg => Debug.Log("msg:" + msg));
 		
 		disposable.Dispose();

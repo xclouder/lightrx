@@ -1,5 +1,7 @@
 ﻿
 
+using System;
+
 public static class Observable
 {
     
@@ -8,14 +10,14 @@ public static class Observable
         return null;
     }
     
-    public static IObservable<T> Where<T>(this IObservable<T> src, System.Func<T, bool> predicate)
+    public static IObservable<T> Where<T>(this IObservable<T> src, Func<T, bool> predicate)
     {
         return new Where<T>(src, predicate);
     }
 
-    public static IObservable<T> Filter<T>(this IObservable<T> src)
+    public static IObservable<TR> Select<T, TR>(this IObservable<T> src, Func<T, TR> selectFunc)
     {
-        return null;
+        return new Select<T,TR>(src, selectFunc);
     }
     
     
