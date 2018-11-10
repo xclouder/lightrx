@@ -1,18 +1,12 @@
-﻿
+﻿using System;
 
-using System;
-
-namespace LightRx
+public interface IObserver<T>
 {
+
+	void OnNotify(T value);
+
+	void OnError(Exception error);
 	
-    public interface IObserver<T>
-    {
-
-	    void OnCompleted();
-	    void OnError(Exception e);
-	    void OnNext(T value);
-
-    }
+//	void Complete();
 
 }
-

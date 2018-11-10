@@ -1,13 +1,6 @@
 ﻿using System;
 
-namespace LightRx
+public interface IObservable<T>
 {
-    public interface IObservable<T> {
-
-	    ICancelable Subscribe(IObserver<T> observer);
-	
-    }
-
+	IDisposable Subscribe(IObserver<T> observer);
 }
-
-
