@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine.TestTools;
 using NUnit.Framework;
 using System.Collections;
+using System.Threading;
 
 public class Test {
 
@@ -15,9 +16,25 @@ public class Test {
 		
 		var disposable = intValOb.Where(val => val > 1)
 			.Select(val => val + ".tostring")
+			.ScheduleToThread((val, cancel) =>
+			{
+
+				while (true)
+				{
+					Debug.Log("sleep 1000ms");
+					Thread.Sleep(1000);
+					
+					if (cancel.State == CancelState.Cancelling)
+					{
+						Debug.Log("cancelled");
+						return;
+					}
+				}
+				
+			})
 			.Subscribe(msg => Debug.Log("msg:" + msg));
 		
-		disposable.Dispose();
+		//disposable.Dispose();
 
 	}
 	

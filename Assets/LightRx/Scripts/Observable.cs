@@ -19,6 +19,11 @@ public static class Observable
     {
         return new Select<T,TR>(src, selectFunc);
     }
+
+    public static IObservable<T> ScheduleToThread<T>(this IObservable<T> src, Action<T, ICancelable> exec)
+    {
+        return new ScheduleToSubThread<T>(src, exec);
+    }
     
     
 }
