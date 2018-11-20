@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42c6a20b-5254-4f86-84d6-565478823253" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/LightRx/Scripts/Editor/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LightRx/Scripts/Editor/Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LightRx/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LightRx/Operators/Observable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LightRx/Operators/Observable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LightRx/Subject/PublishSubject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LightRx/Subject/PublishSubject.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,38 +15,136 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Test.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/LightRx/Scripts/Editor/Test.cs">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PublishSubject.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/LightRx/Subject/PublishSubject.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+            <state relative-caret-position="380">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding>
-                <marker date="1541999574816" expanded="false" signature="6:153" ph="..." />
-                <marker date="1541999574816" expanded="true" signature="173:756" ph="{...}" />
-                <marker date="1541999574816" expanded="true" signature="215:752" ph="{...}" />
-                <marker date="1541999574816" expanded="true" signature="384:599" ph="{...}" />
-                <marker date="1541999574816" expanded="true" signature="407:589" ph="{...}" />
-                <marker date="1541999574816" expanded="true" signature="525:583" ph="{...}" />
-                <marker date="1541999574816" expanded="true" signature="800:1020" ph="{...}" />
-                <marker date="1541999574816" expanded="true" signature="862:886" ph="{...}" />
-                <marker date="1541999574816" expanded="true" signature="943:1018" ph="{...}" />
+                <marker date="1542728639840" expanded="false" signature="6:92" ph="..." />
+                <marker date="1542728639840" expanded="true" signature="155:939" ph="{...}" />
+                <marker date="1542728639840" expanded="true" signature="282:405" ph="{...}" />
+                <marker date="1542728639840" expanded="true" signature="435:469" ph="{...}" />
+                <marker date="1542728639840" expanded="true" signature="496:529" ph="{...}" />
+                <marker date="1542728639840" expanded="true" signature="568:603" ph="{...}" />
+                <marker date="1542728639840" expanded="true" signature="646:935" ph="{...}" />
+                <marker date="1542728639840" expanded="true" signature="794:848" ph="{...}" />
+                <marker date="1542728639840" expanded="true" signature="875:932" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCo.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/TestCo.cs">
+      <file leaf-file-name="Test.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Editor/Test.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="209">
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
               <folding>
-                <marker date="1542269227675" expanded="false" signature="6:78" ph="..." />
-                <marker date="1542269227675" expanded="true" signature="116:466" ph="{...}" />
-                <marker date="1542269227675" expanded="true" signature="166:249" ph="{...}" />
-                <marker date="1542269227675" expanded="true" signature="304:311" ph="{...}" />
-                <marker date="1542269227675" expanded="true" signature="330:464" ph="{...}" />
+                <marker date="1542730722143" expanded="false" signature="6:153" ph="..." />
+                <marker date="1542730722143" expanded="true" signature="173:425" ph="{...}" />
+                <marker date="1542730722143" expanded="true" signature="215:421" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Observable.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/LightRx/Operators/Observable.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+              <folding>
+                <marker date="1542730707154" expanded="false" signature="6:92" ph="..." />
+                <marker date="1542730707154" expanded="true" signature="125:559" ph="{...}" />
+                <marker date="1542730707154" expanded="true" signature="219:267" ph="{...}" />
+                <marker date="1542730707154" expanded="true" signature="365:386" ph="{...}" />
+                <marker date="1542730707154" expanded="true" signature="482:555" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActionObserver.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/LightRx/Observers/ActionObserver.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="584">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+              <folding>
+                <marker date="1542730647746" expanded="true" signature="6:92" ph="..." />
+                <marker date="1542730647746" expanded="true" signature="139:634" ph="{...}" />
+                <marker date="1542730647746" expanded="true" signature="355:447" ph="{...}" />
+                <marker date="1542730647746" expanded="true" signature="478:508" ph="{...}" />
+                <marker date="1542730647746" expanded="true" signature="535:564" ph="{...}" />
+                <marker date="1542730647746" expanded="true" signature="603:632" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Where.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/LightRx/Operators/Where.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+              <folding>
+                <marker date="1542730341746" expanded="true" signature="6:121" ph="..." />
+                <marker date="1542730341746" expanded="true" signature="161:1082" ph="{...}" />
+                <marker date="1542730341746" expanded="true" signature="305:357" ph="{...}" />
+                <marker date="1542730341746" expanded="true" signature="412:565" ph="{...}" />
+                <marker date="1542730341746" expanded="true" signature="616:1080" ph="{...}" />
+                <marker date="1542730341746" expanded="true" signature="768:822" ph="{...}" />
+                <marker date="1542730341746" expanded="true" signature="855:937" ph="{...}" />
+                <marker date="1542730341746" expanded="true" signature="893:933" ph="{...}" />
+                <marker date="1542730341746" expanded="true" signature="965:1000" ph="{...}" />
+                <marker date="1542730341746" expanded="true" signature="1040:1077" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListObserver.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/LightRx/Subject/ListObserver.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="43">
+              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+              <folding>
+                <marker date="1542728390353" expanded="true" signature="6:92" ph="..." />
+                <marker date="1542728390353" expanded="true" signature="137:1287" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="247:314" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="256:308" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="344:464" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="367:461" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="514:617" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="669:819" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="752:812" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="851:973" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="895:914" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="942:970" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="1000:1121" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="1044:1063" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="1091:1118" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="1160:1283" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="1204:1223" ph="{...}" />
+                <marker date="1542728390353" expanded="true" signature="1251:1280" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmptyObserver.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/LightRx/Subject/EmptyObserver.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+              <folding>
+                <marker date="1542726953899" expanded="true" signature="6:92" ph="..." />
+                <marker date="1542726953899" expanded="true" signature="138:379" ph="{...}" />
+                <marker date="1542726953899" expanded="true" signature="222:251" ph="{...}" />
+                <marker date="1542726953899" expanded="true" signature="282:291" ph="{...}" />
+                <marker date="1542726953899" expanded="true" signature="318:327" ph="{...}" />
+                <marker date="1542726953899" expanded="true" signature="366:375" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -55,14 +156,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/LightRx/Scripts/Editor/Test.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TestCo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LightRx/Subject/ListObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LightRx/Subject/EmptyObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LightRx/Operators/Observable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LightRx/Disposable/SingleAssignmentDisposable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LightRx/Subject/PublishSubject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LightRx/Observers/ActionObserver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LightRx/Operators/Where.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/LightRx/Scripts/Editor/Test.cs" />
         <option value="$PROJECT_DIR$/Assets/TestCo.cs" />
+        <option value="$PROJECT_DIR$/Assets/LightRx/Subject/EmptyObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/LightRx/Subject/ListObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/LightRx/Subject/PublishSubject.cs" />
+        <option value="$PROJECT_DIR$/Assets/LightRx/Disposable/SingleAssignmentDisposable.cs" />
+        <option value="$PROJECT_DIR$/Assets/LightRx/Operators/Where.cs" />
+        <option value="$PROJECT_DIR$/Assets/LightRx/Observers/ActionObserver.cs" />
+        <option value="$PROJECT_DIR$/Assets/LightRx/Operators/Observable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/Test.cs" />
       </list>
     </option>
   </component>
@@ -72,43 +187,41 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1833" />
-    <option name="y" value="164" />
-    <option name="width" value="1918" />
-    <option name="height" value="1038" />
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="7" />
+    <option name="y" value="23" />
+    <option name="width" value="1639" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator currentView="UnityExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-file-system" value="false" />
-        <option name="show-all-items" value="false" />
-      </pane>
       <pane id="UnityExplorer">
         <subPane>
           <expand>
             <path>
               <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="LightRx" type="483dac07:UnityExplorerNode$Root" />
+              <item name="lightrx" type="483dac07:UnityExplorerNode$Root" />
             </path>
             <path>
               <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="LightRx" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="LightRx" type="483dac07:UnityExplorerNode$Root" />
-              <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="lightrx" type="483dac07:UnityExplorerNode$Root" />
               <item name="" type="1045f7f1:UnityExplorerNode" />
             </path>
             <path>
               <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="LightRx" type="483dac07:UnityExplorerNode$Root" />
+              <item name="lightrx" type="483dac07:UnityExplorerNode$Root" />
               <item name="" type="1045f7f1:UnityExplorerNode" />
+              <item name="" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="ad4990d8:FileSystemViewPaneBase$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="lightrx" type="483dac07:UnityExplorerNode$Root" />
               <item name="" type="1045f7f1:UnityExplorerNode" />
               <item name="" type="1045f7f1:UnityExplorerNode" />
             </path>
@@ -118,6 +231,10 @@
         <option name="show-hidden-items" value="false" />
       </pane>
       <pane id="Scratches" />
+      <pane id="SolutionExplorer">
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -153,11 +270,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541998094411</updated>
       <workItem from="1541998095976" duration="2920000" />
+      <workItem from="1542726466876" duration="4146000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2920000" />
+    <option name="totallyTimeSpent" value="7066000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -169,70 +287,189 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1833" y="164" width="1918" height="1038" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25242195" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34191704" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" order="7" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="UnityProjectConfiguration" isUnityUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Assets/LightRx/Scripts/Editor/Test.cs">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LightRx/Scripts/Editor/Test.cs">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/TestCo.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/LightRx/Subject/EmptyObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding>
-            <marker date="1541999574816" expanded="false" signature="6:153" ph="..." />
-            <marker date="1541999574816" expanded="true" signature="173:756" ph="{...}" />
-            <marker date="1541999574816" expanded="true" signature="215:752" ph="{...}" />
-            <marker date="1541999574816" expanded="true" signature="384:599" ph="{...}" />
-            <marker date="1541999574816" expanded="true" signature="407:589" ph="{...}" />
-            <marker date="1541999574816" expanded="true" signature="525:583" ph="{...}" />
-            <marker date="1541999574816" expanded="true" signature="800:1020" ph="{...}" />
-            <marker date="1541999574816" expanded="true" signature="862:886" ph="{...}" />
-            <marker date="1541999574816" expanded="true" signature="943:1018" ph="{...}" />
+            <marker date="1542726953899" expanded="true" signature="6:92" ph="..." />
+            <marker date="1542726953899" expanded="true" signature="138:379" ph="{...}" />
+            <marker date="1542726953899" expanded="true" signature="222:251" ph="{...}" />
+            <marker date="1542726953899" expanded="true" signature="282:291" ph="{...}" />
+            <marker date="1542726953899" expanded="true" signature="318:327" ph="{...}" />
+            <marker date="1542726953899" expanded="true" signature="366:375" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/TestCo.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/LightRx/Subject/PublishSubject.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="380">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
-            <marker date="1542269227675" expanded="false" signature="6:78" ph="..." />
-            <marker date="1542269227675" expanded="true" signature="116:466" ph="{...}" />
-            <marker date="1542269227675" expanded="true" signature="166:249" ph="{...}" />
-            <marker date="1542269227675" expanded="true" signature="304:311" ph="{...}" />
-            <marker date="1542269227675" expanded="true" signature="330:464" ph="{...}" />
+            <marker date="1542728639840" expanded="false" signature="6:92" ph="..." />
+            <marker date="1542728639840" expanded="true" signature="155:939" ph="{...}" />
+            <marker date="1542728639840" expanded="true" signature="282:405" ph="{...}" />
+            <marker date="1542728639840" expanded="true" signature="435:469" ph="{...}" />
+            <marker date="1542728639840" expanded="true" signature="496:529" ph="{...}" />
+            <marker date="1542728639840" expanded="true" signature="568:603" ph="{...}" />
+            <marker date="1542728639840" expanded="true" signature="646:935" ph="{...}" />
+            <marker date="1542728639840" expanded="true" signature="794:848" ph="{...}" />
+            <marker date="1542728639840" expanded="true" signature="875:932" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LightRx/Subject/ListObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding>
+            <marker date="1542728390353" expanded="true" signature="6:92" ph="..." />
+            <marker date="1542728390353" expanded="true" signature="137:1287" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="247:314" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="256:308" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="344:464" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="367:461" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="514:617" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="669:819" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="752:812" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="851:973" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="895:914" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="942:970" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="1000:1121" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="1044:1063" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="1091:1118" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="1160:1283" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="1204:1223" ph="{...}" />
+            <marker date="1542728390353" expanded="true" signature="1251:1280" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LightRx/Disposable/SingleAssignmentDisposable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <marker date="1542729608620" expanded="true" signature="6:92" ph="..." />
+            <marker date="1542729608620" expanded="true" signature="147:440" ph="{...}" />
+            <marker date="1542729608620" expanded="true" signature="244:278" ph="{...}" />
+            <marker date="1542729608620" expanded="true" signature="304:348" ph="{...}" />
+            <marker date="1542729608620" expanded="true" signature="375:438" ph="{...}" />
+            <marker date="1542729608620" expanded="true" signature="397:432" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LightRx/Operators/Where.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding>
+            <marker date="1542730341746" expanded="true" signature="6:121" ph="..." />
+            <marker date="1542730341746" expanded="true" signature="161:1082" ph="{...}" />
+            <marker date="1542730341746" expanded="true" signature="305:357" ph="{...}" />
+            <marker date="1542730341746" expanded="true" signature="412:565" ph="{...}" />
+            <marker date="1542730341746" expanded="true" signature="616:1080" ph="{...}" />
+            <marker date="1542730341746" expanded="true" signature="768:822" ph="{...}" />
+            <marker date="1542730341746" expanded="true" signature="855:937" ph="{...}" />
+            <marker date="1542730341746" expanded="true" signature="893:933" ph="{...}" />
+            <marker date="1542730341746" expanded="true" signature="965:1000" ph="{...}" />
+            <marker date="1542730341746" expanded="true" signature="1040:1077" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LightRx/Observers/ActionObserver.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding>
+            <marker date="1542730647746" expanded="true" signature="6:92" ph="..." />
+            <marker date="1542730647746" expanded="true" signature="139:634" ph="{...}" />
+            <marker date="1542730647746" expanded="true" signature="355:447" ph="{...}" />
+            <marker date="1542730647746" expanded="true" signature="478:508" ph="{...}" />
+            <marker date="1542730647746" expanded="true" signature="535:564" ph="{...}" />
+            <marker date="1542730647746" expanded="true" signature="603:632" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LightRx/Operators/Observable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <marker date="1542730707154" expanded="false" signature="6:92" ph="..." />
+            <marker date="1542730707154" expanded="true" signature="125:559" ph="{...}" />
+            <marker date="1542730707154" expanded="true" signature="219:267" ph="{...}" />
+            <marker date="1542730707154" expanded="true" signature="365:386" ph="{...}" />
+            <marker date="1542730707154" expanded="true" signature="482:555" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Editor/Test.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding>
+            <marker date="1542730722143" expanded="false" signature="6:153" ph="..." />
+            <marker date="1542730722143" expanded="true" signature="173:425" ph="{...}" />
+            <marker date="1542730722143" expanded="true" signature="215:421" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\damoncai\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_LightRx.952197612.00" t="ExcludeRecursive" />
-    <e p="H:\lightrx" t="IncludeRecursive">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
-      <e p="Assets\lightrx" t="Include">
-        <e p="Scripts" t="Include">
-          <e p="ActionObserver.cs" t="Include" />
-          <e p="AsyncCallback.cs" t="Include" />
-          <e p="AsyncTask.cs" t="Include" />
-          <e p="DefaultCancelToken.cs" t="Include" />
-          <e p="Editor" t="Include">
-            <e p="Test.cs" t="Include" />
-          </e>
-          <e p="Find.cs" t="Include" />
-          <e p="ICancelable.cs" t="Include" />
+      <e p="Assets/Editor" t="Include">
+        <e p="Test.cs" t="Include" />
+      </e>
+      <e p="Assets/lightrx" t="Include">
+        <e p="Core" t="Include">
           <e p="IObservable.cs" t="Include" />
           <e p="IObserver.cs" t="Include" />
+        </e>
+        <e p="Disposable" t="Include">
+          <e p="SingleAssignmentDisposable.cs" t="Include" />
+        </e>
+        <e p="Observers" t="Include">
+          <e p="ActionObserver.cs" t="Include" />
+        </e>
+        <e p="Operators" t="Include">
           <e p="Observable.cs" t="Include" />
-          <e p="ObservableBase.cs" t="Include" />
-          <e p="ObserverBase.cs" t="Include" />
-          <e p="ScheduleToSubThread.cs" t="Include" />
-          <e p="Select.cs" t="Include" />
           <e p="Where.cs" t="Include" />
         </e>
+        <e p="Subject" t="Include">
+          <e p="EmptyObserver.cs" t="Include" />
+          <e p="ListObserver.cs" t="Include" />
+          <e p="PublishSubject.cs" t="Include" />
+        </e>
       </e>
-      <e p="Assets\TestCo.cs" t="Include" />
       <e p="Library" t="ExcludeRecursive" />
       <e p="LightRx.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
@@ -35,5 +36,6 @@
         <e p="bin" t="ExcludeRecursive" />
       </e>
     </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_lightrx.-739736105.00" t="ExcludeRecursive" />
   </component>
 </project>
