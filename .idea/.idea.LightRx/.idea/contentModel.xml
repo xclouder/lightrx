@@ -5,7 +5,10 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets/Editor" t="Include">
+        <e p="AA.cs" t="Include" />
+        <e p="NewPlayModeTest.cs" t="Include" />
         <e p="Test.cs" t="Include" />
+        <e p="TestRunMode.cs" t="Include" />
       </e>
       <e p="Assets/lightrx" t="Include">
         <e p="Core" t="Include">
@@ -28,6 +31,11 @@
           <e p="EmptyObserver.cs" t="Include" />
           <e p="ListObserver.cs" t="Include" />
           <e p="PublishSubject.cs" t="Include" />
+        </e>
+        <e p="UnityBridge" t="Include">
+          <e p="Scheduler" t="Include">
+            <e p="MainThreadDispatcher.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
