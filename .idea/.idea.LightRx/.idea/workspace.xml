@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42c6a20b-5254-4f86-84d6-565478823253" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LightRx/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LightRx/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LightRx/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LightRx/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Test.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Test.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/TestRunMode.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/TestRunMode.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,75 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Test.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Editor/Test.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <marker date="1542754460960" expanded="false" signature="6:153" ph="..." />
-                <marker date="1542754460960" expanded="true" signature="173:423" ph="{...}" />
-                <marker date="1542754460960" expanded="true" signature="215:419" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestRunMode.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Editor/TestRunMode.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding>
-                <marker date="1542811732272" expanded="false" signature="6:96" ph="..." />
-                <marker date="1542811732272" expanded="true" signature="123:453" ph="{...}" />
-                <marker date="1542811732272" expanded="true" signature="128:240" ph="/* A UnityTest behaves like a coroutine in PlayMode ... */" />
-                <marker date="1542811732272" expanded="true" signature="308:451" ph="{...}" />
-                <marker date="1542811732272" expanded="true" signature="312:382" ph="/* Use the Assert class to test conditions. ... */" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AA.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Editor/AA.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-              <folding>
-                <marker date="1542811825935" expanded="true" signature="6:96" ph="..." />
-                <marker date="1542811825935" expanded="true" signature="114:479" ph="{...}" />
-                <marker date="1542811825935" expanded="true" signature="155:205" ph="{...}" />
-                <marker date="1542811825935" expanded="true" signature="208:320" ph="/* A UnityTest behaves like a coroutine in PlayMode ... */" />
-                <marker date="1542811825935" expanded="true" signature="379:477" ph="{...}" />
-                <marker date="1542811825935" expanded="true" signature="383:453" ph="/* Use the Assert class to test conditions. ... */" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewPlayModeTest.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Editor/NewPlayModeTest.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-              <folding>
-                <marker date="1542811892618" expanded="false" signature="6:96" ph="..." />
-                <marker date="1542811892618" expanded="true" signature="127:583" ph="{...}" />
-                <marker date="1542811892618" expanded="true" signature="181:231" ph="{...}" />
-                <marker date="1542811892618" expanded="true" signature="234:346" ph="/* A UnityTest behaves like a coroutine in PlayMode ... */" />
-                <marker date="1542811892618" expanded="true" signature="418:581" ph="{...}" />
-                <marker date="1542811892618" expanded="true" signature="422:492" ph="/* Use the Assert class to test conditions. ... */" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainThreadDispatcher.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainThreadDispatcher.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/LightRx/UnityBridge/Scheduler/MainThreadDispatcher.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+            <state relative-caret-position="535">
+              <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
               <folding>
                 <marker date="1542811596924" expanded="true" signature="6:58" ph="..." />
                 <marker date="1542811596924" expanded="true" signature="93:1079" ph="{...}" />
@@ -194,18 +134,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Editor/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LightRx/Disposable/SingleAssignmentDisposable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LightRx/UnityBridge/Scheduler/MainThreadDispatcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LightRx/Subject/PublishSubject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LightRx/Operators/SelectObservable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Editor/AA.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LightRx/Subject/ListObserver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LightRx/Subject/EmptyObserver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Editor/NewPlayModeTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LightRx/Operators/Observable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LightRx/Operators/WhenAllObservable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Editor/TestRunMode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LightRx/Observers/ActionObserver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LightRx/Operators/WhereObservable.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -224,9 +160,9 @@
         <option value="$PROJECT_DIR$/Assets/LightRx/Operators/WhereObservable.cs" />
         <option value="$PROJECT_DIR$/Assets/LightRx/Operators/SelectObservable.cs" />
         <option value="$PROJECT_DIR$/Assets/LightRx/Operators/Observable.cs" />
-        <option value="$PROJECT_DIR$/Assets/LightRx/UnityBridge/Scheduler/MainThreadDispatcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/TestRunMode.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/NewPlayModeTest.cs" />
+        <option value="$PROJECT_DIR$/Assets/LightRx/UnityBridge/Scheduler/MainThreadDispatcher.cs" />
       </list>
     </option>
   </component>
@@ -302,12 +238,12 @@
       <updated>1541998094411</updated>
       <workItem from="1541998095976" duration="2920000" />
       <workItem from="1542726466876" duration="4233000" />
-      <workItem from="1542754420958" duration="3443000" />
+      <workItem from="1542754420958" duration="3657000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10596000" />
+    <option name="totallyTimeSpent" value="10810000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -481,11 +417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="25" column="4" lean-forward="true" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-          <folding>
-            <marker date="1542754460960" expanded="false" signature="6:153" ph="..." />
-            <marker date="1542754460960" expanded="true" signature="173:423" ph="{...}" />
-            <marker date="1542754460960" expanded="true" signature="215:419" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -644,10 +575,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Editor/Test.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Editor/AA.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Editor/NewPlayModeTest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Editor/TestRunMode.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/LightRx/UnityBridge/Scheduler/MainThreadDispatcher.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="27" column="44" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+        <state relative-caret-position="535">
+          <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
           <folding>
             <marker date="1542811596924" expanded="true" signature="6:58" ph="..." />
             <marker date="1542811596924" expanded="true" signature="93:1079" ph="{...}" />
@@ -660,62 +619,6 @@
             <marker date="1542811596924" expanded="true" signature="749:841" ph="{...}" />
             <marker date="1542811596924" expanded="true" signature="945:1075" ph="{...}" />
             <marker date="1542811596924" expanded="true" signature="1029:1072" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Editor/Test.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <marker date="1542754460960" expanded="false" signature="6:153" ph="..." />
-            <marker date="1542754460960" expanded="true" signature="173:423" ph="{...}" />
-            <marker date="1542754460960" expanded="true" signature="215:419" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Editor/AA.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding>
-            <marker date="1542811825935" expanded="true" signature="6:96" ph="..." />
-            <marker date="1542811825935" expanded="true" signature="114:479" ph="{...}" />
-            <marker date="1542811825935" expanded="true" signature="155:205" ph="{...}" />
-            <marker date="1542811825935" expanded="true" signature="208:320" ph="/* A UnityTest behaves like a coroutine in PlayMode ... */" />
-            <marker date="1542811825935" expanded="true" signature="379:477" ph="{...}" />
-            <marker date="1542811825935" expanded="true" signature="383:453" ph="/* Use the Assert class to test conditions. ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Editor/NewPlayModeTest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding>
-            <marker date="1542811892618" expanded="false" signature="6:96" ph="..." />
-            <marker date="1542811892618" expanded="true" signature="127:583" ph="{...}" />
-            <marker date="1542811892618" expanded="true" signature="181:231" ph="{...}" />
-            <marker date="1542811892618" expanded="true" signature="234:346" ph="/* A UnityTest behaves like a coroutine in PlayMode ... */" />
-            <marker date="1542811892618" expanded="true" signature="418:581" ph="{...}" />
-            <marker date="1542811892618" expanded="true" signature="422:492" ph="/* Use the Assert class to test conditions. ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Editor/TestRunMode.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <marker date="1542811732272" expanded="false" signature="6:96" ph="..." />
-            <marker date="1542811732272" expanded="true" signature="123:453" ph="{...}" />
-            <marker date="1542811732272" expanded="true" signature="128:240" ph="/* A UnityTest behaves like a coroutine in PlayMode ... */" />
-            <marker date="1542811732272" expanded="true" signature="308:451" ph="{...}" />
-            <marker date="1542811732272" expanded="true" signature="312:382" ph="/* Use the Assert class to test conditions. ... */" />
           </folding>
         </state>
       </provider>
