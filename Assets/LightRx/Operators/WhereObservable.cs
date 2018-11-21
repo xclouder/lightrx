@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 
-public class Where<T> : IObservable<T>
+public class WhereObservable<T> : IObservable<T>
 {
 
 	private readonly IObservable<T> _source;
 	private Func<T, bool> _whereFunc;
 	
-	public Where(IObservable<T> source, Func<T, bool> whereFunc)
+	public WhereObservable(IObservable<T> source, Func<T, bool> whereFunc)
 	{
 		_source = source;
 		_whereFunc = whereFunc;
@@ -27,9 +27,9 @@ public class Where<T> : IObservable<T>
 	private class InnerWhereObserver : IObserver<T>
 	{
 		private readonly IObserver<T> _observer;
-		private readonly Where<T> _parent;
+		private readonly WhereObservable<T> _parent;
 
-		public InnerWhereObserver(Where<T> parent, IObserver<T> observer)
+		public InnerWhereObserver(WhereObservable<T> parent, IObserver<T> observer)
 		{
 			_parent = parent;
 			_observer = observer;

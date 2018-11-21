@@ -7,12 +7,12 @@ public static class Observable {
 
 	public static IObservable<T> Where<T>(this IObservable<T> source, Func<T, bool> whereFunc)
 	{
-		return new Where<T>(source, whereFunc);
+		return new WhereObservable<T>(source, whereFunc);
 	}
 
 	public static IObservable<TR> Select<T, TR>(this IObservable<T> source, Func<T, TR> selectFunc)
 	{
-		return null;
+		return new SelectObservable<T,TR>(source, selectFunc);
 	}
 
 	public static IDisposable Subscribe<T>(this IObservable<T> source, Action<T> subscribeAction)

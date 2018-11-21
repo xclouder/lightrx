@@ -15,7 +15,7 @@ public class Test {
 		var sub = new PublishSubject<int>();
 
 		sub.Where(v => v > 3)
-			//.Select(v => v.ToString())
+			.Select(v => v.ToString())
 			.Subscribe(v => Debug.Log("result:" + v));
 		
 		sub.OnNext(1);
