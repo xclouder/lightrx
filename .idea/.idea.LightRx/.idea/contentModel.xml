@@ -10,6 +10,8 @@
           <e p="IObserver.cs" t="Include" />
         </e>
         <e p="Disposable" t="Include">
+          <e p="CancellationToken.cs" t="Include" />
+          <e p="ICancelable.cs" t="Include" />
           <e p="SingleAssignmentDisposable.cs" t="Include" />
         </e>
         <e p="Observers" t="Include">
@@ -22,11 +24,14 @@
           <e p="WhereObservable.cs" t="Include" />
         </e>
         <e p="Subject" t="Include">
-          <e p="EmptyObserver.cs" t="Include" />
           <e p="ListObserver.cs" t="Include" />
           <e p="PublishSubject.cs" t="Include" />
         </e>
         <e p="UnityBridge" t="Include">
+          <e p="Observable.Unity.cs" t="Include" />
+          <e p="Operators" t="Include">
+            <e p="FromCoroutineObservable.cs" t="Include" />
+          </e>
           <e p="Scheduler" t="Include">
             <e p="MainThreadDispatcher.cs" t="Include" />
           </e>

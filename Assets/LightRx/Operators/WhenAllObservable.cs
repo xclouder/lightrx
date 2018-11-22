@@ -1,16 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WhenAllObservable : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-		
+public class WhenAllObservable<T> : IObservable<T> {
+	
+	public IDisposable Subscribe(IObserver<T> observer)
+	{
+		throw new NotImplementedException();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
