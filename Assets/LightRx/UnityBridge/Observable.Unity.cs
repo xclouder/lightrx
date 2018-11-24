@@ -1,13 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class Observable_Unity
+public static partial class Observable
 {
-
-	public static IObservable<T> FromCoroutine<T>(this IObservable<T> source, IEnumerator coroutine)
+	public static IObservable<T> FromCoroutine<T>(Func<IObserver<T>, CancellationToken, IEnumerator> coroutine)
 	{
-		return null;
+		return new FromCoroutineObservable<T>(coroutine);
 	}
 
 }

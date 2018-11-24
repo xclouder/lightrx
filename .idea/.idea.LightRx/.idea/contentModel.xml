@@ -10,6 +10,7 @@
           <e p="IObserver.cs" t="Include" />
         </e>
         <e p="Disposable" t="Include">
+          <e p="BooleanDisposable.cs" t="Include" />
           <e p="CancellationToken.cs" t="Include" />
           <e p="ICancelable.cs" t="Include" />
           <e p="SingleAssignmentDisposable.cs" t="Include" />
@@ -19,6 +20,7 @@
         </e>
         <e p="Operators" t="Include">
           <e p="Observable.cs" t="Include" />
+          <e p="OperatorObserverBase.cs" t="Include" />
           <e p="SelectObservable.cs" t="Include" />
           <e p="WhenAllObservable.cs" t="Include" />
           <e p="WhereObservable.cs" t="Include" />
@@ -41,7 +43,7 @@
         <e p="Editor" t="Include">
           <e p="Test.cs" t="Include" />
         </e>
-        <e p="TestRunMode.cs" t="Include" />
+        <e p="TestFromCoroutine.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="LightRx.sln" t="IncludeFlat" />

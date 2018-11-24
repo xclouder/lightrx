@@ -22,7 +22,7 @@ public class MainThreadDispatcher
 		}
 	}
 
-	private InnerHelpMonoBehaviour _monoBehaviour;
+	private readonly InnerHelpMonoBehaviour _monoBehaviour;
 	private MainThreadDispatcher()
 	{
 		var obj = new GameObject("[LightRx-MainThreadDispatcher]");

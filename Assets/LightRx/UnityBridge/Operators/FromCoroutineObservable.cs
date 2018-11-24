@@ -5,45 +5,76 @@ using UnityEngine;
 
 public class FromCoroutineObservable<T> : IObservable<T>
 {
-
-	private IObservable<T> _source;
-	private Func<T, IObserver<T>, CancellationToken, IEnumerator> _coroutine;
+	private readonly Func<IObserver<T>, CancellationToken, IEnumerator> _coroutine;
 
 	private Coroutine _runningCoroutine;
 	
-	public FromCoroutineObservable(IObservable<T> source, Func<T, IObserver<T>, CancellationToken, IEnumerator> coroutine)
+	public FromCoroutineObservable(Func<IObserver<T>, CancellationToken, IEnumerator> coroutine)
 	{
-		_source = source;
 		_coroutine = coroutine;
 	}
 	
 	public IDisposable Subscribe(IObserver<T> observer)
 	{
-		return null;
+		var disposable = new BooleanDisposable();
+		var cancellationToken = new CancellationToken(disposable);
+		
+		var coroutineObserer = new InnerFromCoroutineObserver(observer, disposable);
+		
+		var c = _coroutine(coroutineObserer, cancellationToken);
+		
+		MainThreadDispatcher.Instance.StartCoroutine(c);
+		
+		return disposable;
 	}
 
-	private class InnerFromCoroutineObserver : IObserver<T>
+	private class InnerFromCoroutineObserver : OperatorObserverBase<T,T>
 	{
-		private FromCoroutineObservable<T> _parent;
 		
-		public InnerFromCoroutineObserver(FromCoroutineObservable<T> parent)
+		public InnerFromCoroutineObserver(IObserver<T> observer, IDisposable cancel) : base(observer, cancel)
 		{
-			_parent = parent;
 		}
 		
-		public void OnNext(T value)
+		public override void OnNext(T value)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				Observer.OnNext(value);
+			}
+			catch
+			{
+				Dispose();
+				
+				throw;
+			}
 		}
 
-		public void OnComplete()
+		public override void OnComplete()
 		{
-			throw new NotImplementedException();
+			try
+			{
+				Observer.OnComplete();
+			}
+			catch
+			{
+				Dispose();
+				
+				throw;
+			}
+			
 		}
 
-		public void OnError(Exception error)
+		public override void OnError(Exception error)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				Observer.OnError(error);
+			}
+			catch
+			{
+				Dispose();
+				throw;
+			}
 		}
 	}
 }
