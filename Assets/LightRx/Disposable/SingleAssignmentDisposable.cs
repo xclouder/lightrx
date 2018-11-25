@@ -6,7 +6,19 @@ using UnityEngine;
 public class SingleAssignmentDisposable : IDisposable
 {
 	private IDisposable _disposable;
-	
+
+	public IDisposable Disposable
+	{
+		get { return _disposable; }
+		set { _disposable = value; }
+	}
+
+
+	public SingleAssignmentDisposable()
+	{
+		
+	}
+		
 	public SingleAssignmentDisposable(IDisposable disposable)
 	{
 		_disposable = disposable;

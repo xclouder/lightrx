@@ -12,6 +12,7 @@
         <e p="Disposable" t="Include">
           <e p="BooleanDisposable.cs" t="Include" />
           <e p="CancellationToken.cs" t="Include" />
+          <e p="CompositeDisposable.cs" t="Include" />
           <e p="ICancelable.cs" t="Include" />
           <e p="SingleAssignmentDisposable.cs" t="Include" />
         </e>
@@ -20,6 +21,7 @@
         </e>
         <e p="Operators" t="Include">
           <e p="Observable.cs" t="Include" />
+          <e p="OperatorObservableBase.cs" t="Include" />
           <e p="OperatorObserverBase.cs" t="Include" />
           <e p="SelectObservable.cs" t="Include" />
           <e p="WhenAllObservable.cs" t="Include" />
