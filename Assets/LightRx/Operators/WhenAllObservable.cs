@@ -15,41 +15,130 @@ public class WhenAllObservable<T> : IObservable<T[]>
 	}
 	
 	public IDisposable Subscribe(IObserver<T[]> observer)
-	{	
-		var cancel = new CompositeDisposable();
-		var innerObserver = new InnerWhenAllObserver(this, observer, cancel);
+	{
+		var cancel = new SingleAssignmentDisposable();
 		
-		foreach (var o in _observables)
-		{
-			var d = o.Subscribe(innerObserver);
-			cancel.Add(d);
-		}
+		var innerObserver = new InnerWhenAllObserver(_observables, observer, cancel);
 
-		return cancel;
+		return innerObserver.Run();
 	}
 
-	private class InnerWhenAllObserver : OperatorObserverBase<T, T[]>
+	private class InnerWhenAllObserver : OperatorObserverBase<T[], T[]>
 	{
-		private WhenAllObservable<T> _parent;
+		private readonly IObservable<T>[] _sources;
+		private readonly IObserver<T[]> _observer;
+
+		private T[] _values;
+		private int _length;
+		private int _completedCount;
 		
-		public InnerWhenAllObserver(WhenAllObservable<T> parent, IObserver<T[]> observer, IDisposable cancel) : base(observer, cancel)
+		public InnerWhenAllObserver(IObservable<T>[] sources, IObserver<T[]> observer, IDisposable cancel) : base(observer, cancel)
 		{
-			_parent = parent;
+			_sources = sources;
+			_observer = observer;
 		}
 
-		public override void OnNext(T value)
+		public override void OnNext(T[] value)
 		{
-			//ignore
+			Observer.OnNext(value);
 		}
 
 		public override void OnComplete()
 		{
-			
+			try
+			{
+				_observer.OnComplete();
+			}
+			finally 
+			{
+				Dispose();
+			}
 		}
 
 		public override void OnError(Exception error)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				_observer.OnError(error);
+			}
+			finally 
+			{
+				//TODO here the Dispose is SingleAssignmentDisposable, not CompositeDisposable, any problem?
+				Dispose();
+			}
+		}
+
+		public IDisposable Run()
+		{
+			_length = _sources.Length;
+
+			if (_length == 0)
+			{
+				OnNext(new T[0]);
+				try { _observer.OnComplete(); } finally { Dispose(); }
+				
+				return Disposable.Empty;
+			}
+			
+			_completedCount = 0;
+			_values = new T[_length];
+
+			var disposable = new CompositeDisposable();
+			for (int index = 0; index < _length; index++)
+			{
+				var source = _sources[index];
+				var observer = new WhenAllCollectionObserver(this, index);
+				var d = source.Subscribe(observer);
+				
+				disposable.Add(d);
+			}
+			
+			return disposable;
+		}
+		
+		private class WhenAllCollectionObserver : IObserver<T>
+		{
+			private readonly InnerWhenAllObserver _parent;
+			private readonly int _index;
+			private bool _isCompleted = false;
+			
+			public WhenAllCollectionObserver(InnerWhenAllObserver parent, int index)
+			{
+				_parent = parent;
+				_index = index;
+			}
+			
+			public void OnNext(T value)
+			{
+				if (!_isCompleted)
+				{
+					_parent._values[_index] = value;
+				}
+			}
+
+			public void OnComplete()
+			{
+				if (!_isCompleted)
+				{
+					_isCompleted = true;
+					_parent._completedCount++;
+					
+					if (_parent._completedCount == _parent._length)
+					{
+						_parent.OnNext(_parent._values);
+						_parent.OnComplete();
+					}
+				}
+			}
+
+			public void OnError(Exception error)
+			{
+				if (!_isCompleted)
+				{
+					_parent.OnError(error);
+				}
+			}
 		}
 	}
+	
 }
