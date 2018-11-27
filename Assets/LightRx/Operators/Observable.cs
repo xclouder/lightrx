@@ -19,5 +19,10 @@ public static partial class Observable {
 	{
 		return source.Subscribe(new ActionObserver<T>(subscribeAction, completionAction, errorAction));
 	}
+
+	public static IObservable<T[]> WhenAll<T>(params IObservable<T>[] observables)
+	{
+		return new WhenAllObservable<T>(observables);
+	}
 	
 }

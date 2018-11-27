@@ -24,11 +24,19 @@ public class ActionObserver<T> : IObserver<T>
 
 	public void OnComplete()
 	{
-		_onCompleteAction();
+		if (_onCompleteAction != null)
+		{
+			_onCompleteAction();	
+		}
+		
 	}
 
 	public void OnError(Exception error)
 	{
-		_onErrAction(error);
+		if (_onErrAction != null)
+		{
+			_onErrAction(error);	
+		}
+		
 	}
 }

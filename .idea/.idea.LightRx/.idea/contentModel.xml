@@ -13,6 +13,7 @@
           <e p="BooleanDisposable.cs" t="Include" />
           <e p="CancellationToken.cs" t="Include" />
           <e p="CompositeDisposable.cs" t="Include" />
+          <e p="Disposable.cs" t="Include" />
           <e p="ICancelable.cs" t="Include" />
           <e p="SingleAssignmentDisposable.cs" t="Include" />
         </e>
