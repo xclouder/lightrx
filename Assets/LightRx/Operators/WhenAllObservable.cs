@@ -20,7 +20,9 @@ public class WhenAllObservable<T> : IObservable<T[]>
 		
 		var innerObserver = new InnerWhenAllObserver(_observables, observer, cancel);
 
-		return innerObserver.Run();
+		cancel.Disposable = innerObserver.Run();
+
+		return cancel;
 	}
 
 	private class InnerWhenAllObserver : OperatorObserverBase<T[], T[]>
