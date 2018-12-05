@@ -7,7 +7,7 @@ public abstract class OperatorObserverBase<T, TR> : IObserver<T>, IDisposable
 {
 
 	protected IObserver<TR> Observer;
-	private IDisposable _cancel;
+	protected IDisposable _cancel;
 	
 	public OperatorObserverBase(IObserver<TR> observer, IDisposable cancel)
 	{

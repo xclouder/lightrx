@@ -8,6 +8,7 @@
         <e p="Core" t="Include">
           <e p="IObservable.cs" t="Include" />
           <e p="IObserver.cs" t="Include" />
+          <e p="Unit.cs" t="Include" />
         </e>
         <e p="Disposable" t="Include">
           <e p="BooleanDisposable.cs" t="Include" />
@@ -15,12 +16,14 @@
           <e p="CompositeDisposable.cs" t="Include" />
           <e p="Disposable.cs" t="Include" />
           <e p="ICancelable.cs" t="Include" />
+          <e p="SerialDisposable.cs" t="Include" />
           <e p="SingleAssignmentDisposable.cs" t="Include" />
         </e>
         <e p="Observers" t="Include">
           <e p="ActionObserver.cs" t="Include" />
         </e>
         <e p="Operators" t="Include">
+          <e p="ContinueWithObservable.cs" t="Include" />
           <e p="Observable.cs" t="Include" />
           <e p="OperatorObservableBase.cs" t="Include" />
           <e p="OperatorObserverBase.cs" t="Include" />
