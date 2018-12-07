@@ -17,13 +17,7 @@ public class ContinueWithObservable<T, TR> : IObservable<TR>
 	
 	public IDisposable Subscribe(IObserver<TR> observer)
 	{
-		var cancel = new SingleAssignmentDisposable();
-
-		//TODO
-		var disposable = _source.Subscribe(new InnerContinueWithObserver(this, observer, cancel));
-		cancel.Disposable = disposable;
-		
-		return cancel;
+		return new InnerContinueWithObserver(this, observer, null).Run();
 	}
 
 	private class InnerContinueWithObserver : OperatorObserverBase<T, TR>
@@ -32,7 +26,7 @@ public class ContinueWithObservable<T, TR> : IObservable<TR>
 		private bool _seenValue = false;
 		private T _lastValue;
 		
-		private SerialDisposable _serialDisposable = new SerialDisposable();
+		private readonly SerialDisposable _serialDisposable = new SerialDisposable();
 		
 		public InnerContinueWithObserver(ContinueWithObservable<T, TR> parent, IObserver<TR> observer, IDisposable cancel) : base(observer, cancel)
 		{
@@ -41,10 +35,7 @@ public class ContinueWithObservable<T, TR> : IObservable<TR>
 
 		public IDisposable Run()
 		{
-			var sourceDisposable = new SingleAssignmentDisposable();
-			_serialDisposable.Disposable = sourceDisposable;
-
-			sourceDisposable.Disposable = _parent._source.Subscribe(this);
+			_serialDisposable.Disposable = _parent._source.Subscribe(this);
 			return _serialDisposable;
 		}
 		
