@@ -50,6 +50,7 @@
           <e p="Test.cs" t="Include" />
         </e>
         <e p="PlayTest.cs" t="Include" />
+        <e p="TestContinueWith.cs" t="Include" />
         <e p="TestFromCoroutine.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />

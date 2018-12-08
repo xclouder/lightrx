@@ -10,4 +10,22 @@ public static partial class Observable
 		return new FromCoroutineObservable<T>(coroutine);
 	}
 
+	public static IObservable<Unit> FromCoroutine<Unit>(Func<CancellationToken, IEnumerator> coroutine)
+	{
+		return new FromCoroutineObservable<Unit>((observer, cancellationToken) => CoroutineWrap(observer, cancellationToken, coroutine));
+	}
+
+	private static IEnumerator CoroutineWrap<Unit>(IObserver<Unit> observer, CancellationToken cancellationToken, Func<CancellationToken,IEnumerator> originCoroutine)
+	{
+		var c = originCoroutine(cancellationToken);
+
+		while (c.MoveNext())
+		{
+			observer.OnNext(default(Unit));
+			
+			yield return null;
+		}
+		
+		observer.OnComplete();
+	}
 }

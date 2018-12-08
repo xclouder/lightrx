@@ -24,5 +24,10 @@ public static partial class Observable {
 	{
 		return new WhenAllObservable<T>(observables);
 	}
+
+	public static IObservable<TR> ContinueWith<T, TR>(this IObservable<T> source, Func<T, IObservable<TR>> selector)
+	{
+		return new ContinueWithObservable<T,TR>(source, selector);
+	}
 	
 }
