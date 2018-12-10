@@ -17,7 +17,12 @@ public class ContinueWithObservable<T, TR> : IObservable<TR>
 	
 	public IDisposable Subscribe(IObserver<TR> observer)
 	{
-		return new InnerContinueWithObserver(this, observer, null).Run();
+		var cancel = new SingleAssignmentDisposable();
+		var disposable = new InnerContinueWithObserver(this, observer, cancel).Run();
+
+		cancel.Disposable = disposable;
+
+		return cancel;
 	}
 
 	private class InnerContinueWithObserver : OperatorObserverBase<T, TR>
