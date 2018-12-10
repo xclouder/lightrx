@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = System.Object;
 
 public static partial class Observable
 {
@@ -10,7 +11,7 @@ public static partial class Observable
 		return new FromCoroutineObservable<T>(coroutine);
 	}
 
-	public static IObservable<Unit> FromCoroutine<Unit>(Func<CancellationToken, IEnumerator> coroutine)
+	public static IObservable<Unit> FromCoroutine(Func<CancellationToken, IEnumerator> coroutine)
 	{
 		return new FromCoroutineObservable<Unit>((observer, cancellationToken) => CoroutineWrap(observer, cancellationToken, coroutine));
 	}
@@ -23,7 +24,7 @@ public static partial class Observable
 		{
 			observer.OnNext(default(Unit));
 			
-			yield return null;
+			yield return c.Current;
 		}
 		
 		observer.OnComplete();
