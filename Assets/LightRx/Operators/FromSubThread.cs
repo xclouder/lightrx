@@ -7,47 +7,48 @@ using UnityEngine;
 public class FromSubThread<T, TR> : IObservable<TR>
 {
 	private IObservable<T> _source;
-	private Func<T, CancellationToken, TR> _execFunc;
+	private readonly Func<T, CancellationToken, TR> _execFunc;
+	private readonly T _input;
 	
-	public FromSubThread(IObservable<T> source, Func<T, CancellationToken, TR> execFunc)
+	public FromSubThread(Func<T, CancellationToken, TR> execFunc, T inputVal = default(T))
 	{
-		_source = source;
 		_execFunc = execFunc;
+		_input = inputVal;
 	}
 	
 	public IDisposable Subscribe(IObserver<TR> observer)
 	{
-		
-		
-		return null;
+		return new FromSubThreadInternal(observer, null).Run(_input, _execFunc);
 	}
 
 	private class FromSubThreadInternal : OperatorObserverBase<T, TR>
 	{
 		public FromSubThreadInternal(IObserver<TR> observer, IDisposable cancel) : base(observer, cancel)
 		{
-			
 		}
 
-		public IDisposable Run(Func<T, CancellationToken, TR> execFunc)
+		public IDisposable Run(T inputVal, Func<T, CancellationToken, TR> execFunc)
 		{
-			MainThreadDispatcher.Instance.StartCoroutine(ExecFuncCo(execFunc));
-			return null;
+			var disposable = new BooleanDisposable();
+			var cancellationToken = new CancellationToken(disposable);
+			_cancel = disposable;
+			
+			MainThreadDispatcher.Instance.StartCoroutine(ExecFuncCo(inputVal, cancellationToken, execFunc));
+			return disposable;
 		}
 
-		private IEnumerator ExecFuncCo(Func<T, CancellationToken, TR> execFunc)
+		private IEnumerator ExecFuncCo(T inputVal, CancellationToken cancellationToken, Func<T, CancellationToken, TR> execFunc)
 		{
 			Exception throwedException = null;
 			bool finished = false;
 			TR result = default(TR);
+			var input = inputVal;
 			
-			//TODO: 这里T怎么传进来？
 			ThreadPool.QueueUserWorkItem(o =>
 			{
 				try
 				{
-					//TODO cancel
-					result = execFunc(default(T), new CancellationToken());
+					result = execFunc(input, cancellationToken);
 				}
 				catch (Exception e)
 				{
@@ -66,11 +67,11 @@ public class FromSubThread<T, TR> : IObservable<TR>
 			if (throwedException == null)
 			{
 				Observer.OnNext(result);
-				Observer.OnError(throwedException);
+				Observer.OnComplete();
 			}
 			else
 			{
-				Observer.OnComplete();
+				Observer.OnError(throwedException);
 			}
 
 		}
@@ -82,12 +83,29 @@ public class FromSubThread<T, TR> : IObservable<TR>
 
 		public override void OnComplete()
 		{
-			
+			try
+			{
+				Observer.OnComplete();
+			}
+			catch
+			{
+				Dispose();
+				
+				throw;
+			}
 		}
 
 		public override void OnError(Exception error)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				Observer.OnError(error);
+			}
+			catch
+			{
+				Dispose();
+				throw;
+			}
 		}
 	}
 }
