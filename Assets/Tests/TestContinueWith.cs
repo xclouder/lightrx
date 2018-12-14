@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LightRx;
+using LightRx.Unity;
 
 public class TestContinueWith : MonoBehaviour
 {

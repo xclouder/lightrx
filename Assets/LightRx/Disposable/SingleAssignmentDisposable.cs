@@ -1,42 +1,44 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class SingleAssignmentDisposable : IDisposable
+namespace LightRx
 {
-	private IDisposable _disposable;
 
-	public IDisposable Disposable
-	{
-		get { return _disposable; }
-		set { _disposable = value; }
-	}
+    public class SingleAssignmentDisposable : IDisposable
+    {
+        private IDisposable _disposable;
+
+        public IDisposable Disposable
+        {
+            get { return _disposable; }
+            set { _disposable = value; }
+        }
 
 
-	public SingleAssignmentDisposable()
-	{
+        public SingleAssignmentDisposable()
+        {
 		
-	}
+        }
 		
-	public SingleAssignmentDisposable(IDisposable disposable)
-	{
-		_disposable = disposable;
-	}
+        public SingleAssignmentDisposable(IDisposable disposable)
+        {
+            _disposable = disposable;
+        }
 
 
-	public bool IsDisposed
-	{
-		get { return _disposable == null; }
-	}
+        public bool IsDisposed
+        {
+            get { return _disposable == null; }
+        }
 	
 	
-	public void Dispose()
-	{
-		if (!IsDisposed)
-		{
-			_disposable.Dispose();	
-		}
+        public void Dispose()
+        {
+            if (!IsDisposed)
+            {
+                _disposable.Dispose();	
+            }
 		
-	}
+        }
+    }
+
 }

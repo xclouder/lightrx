@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿namespace LightRx
+{
+    public interface ICancelable {
+	
+        bool IsCanceled { get; }
+	
+    }
 
-public interface ICancelable {
-	
-	bool IsCanceled { get; }
-	
 }

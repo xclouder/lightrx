@@ -1,10 +1,6 @@
-﻿using System;
-using UnityEngine;
-using UnityEditor;
-using UnityEngine.TestTools;
+﻿using LightRx;
 using NUnit.Framework;
-using System.Collections;
-using System.Threading;
+using UnityEngine;
 
 public class Test {
 

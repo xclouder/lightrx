@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using LightRx;
+using LightRx.Unity;
 
 public class TestFromThread : MonoBehaviour {
 

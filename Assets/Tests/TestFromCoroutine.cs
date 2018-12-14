@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.TestTools;
+using LightRx;
+using LightRx.Unity;
 
 public class TestFromCoroutine {
 

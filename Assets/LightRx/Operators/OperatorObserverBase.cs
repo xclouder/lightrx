@@ -1,28 +1,30 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public abstract class OperatorObserverBase<T, TR> : IObserver<T>, IDisposable
+namespace LightRx
 {
+    public abstract class OperatorObserverBase<T, TR> : IObserver<T>, IDisposable
+    {
 
-	protected IObserver<TR> Observer;
-	protected IDisposable _cancel;
+        protected IObserver<TR> Observer;
+        protected IDisposable _cancel;
 	
-	public OperatorObserverBase(IObserver<TR> observer, IDisposable cancel)
-	{
-		Observer = observer;
-		_cancel = cancel;
-	}
+        public OperatorObserverBase(IObserver<TR> observer, IDisposable cancel)
+        {
+            Observer = observer;
+            _cancel = cancel;
+        }
 
-	public abstract void OnNext(T value);
+        public abstract void OnNext(T value);
 
-	public abstract void OnComplete();
+        public abstract void OnComplete();
 
-	public abstract void OnError(Exception error);
+        public abstract void OnError(Exception error);
 	
-	public void Dispose()
-	{
-		_cancel.Dispose();
-	}
+        public void Dispose()
+        {
+            _cancel.Dispose();
+        }
+    }
+
+
 }

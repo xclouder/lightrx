@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public interface IObservable<T>
+namespace LightRx
 {
+    public interface IObservable<T>
+    {
 
-    IDisposable Subscribe(IObserver<T> observer);
+        IDisposable Subscribe(IObserver<T> observer);
 
+    }
 }
+

@@ -1,42 +1,44 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class ActionObserver<T> : IObserver<T>
+namespace LightRx
 {
 
-	private Action<T> _onNextAction;
-	private Action _onCompleteAction;
-	private Action<Exception> _onErrAction;
-	
-	public ActionObserver(Action<T> onNext, Action onComplete = null, Action<Exception> onError = null)
-	{
-		_onNextAction = onNext;
-		_onCompleteAction = onComplete;
-		_onErrAction = onError;
-	}
-	
-	public void OnNext(T value)
-	{
-		_onNextAction(value);
-	}
+    public class ActionObserver<T> : IObserver<T>
+    {
 
-	public void OnComplete()
-	{
-		if (_onCompleteAction != null)
-		{
-			_onCompleteAction();	
-		}
-		
-	}
+        private Action<T> _onNextAction;
+        private Action _onCompleteAction;
+        private Action<Exception> _onErrAction;
+	
+        public ActionObserver(Action<T> onNext, Action onComplete = null, Action<Exception> onError = null)
+        {
+            _onNextAction = onNext;
+            _onCompleteAction = onComplete;
+            _onErrAction = onError;
+        }
+	
+        public void OnNext(T value)
+        {
+            _onNextAction(value);
+        }
 
-	public void OnError(Exception error)
-	{
-		if (_onErrAction != null)
-		{
-			_onErrAction(error);	
-		}
+        public void OnComplete()
+        {
+            if (_onCompleteAction != null)
+            {
+                _onCompleteAction();	
+            }
 		
-	}
+        }
+
+        public void OnError(Exception error)
+        {
+            if (_onErrAction != null)
+            {
+                _onErrAction(error);	
+            }
+		
+        }
+    }
 }
+

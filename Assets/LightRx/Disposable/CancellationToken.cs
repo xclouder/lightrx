@@ -1,29 +1,33 @@
 ﻿using System;
 
-public struct CancellationToken
+namespace LightRx
 {
-	readonly ICancelable source;
+    public struct CancellationToken
+    {
+        readonly ICancelable source;
 
-	public static readonly CancellationToken Empty = new CancellationToken(null);
+        public static readonly CancellationToken Empty = new CancellationToken(null);
 
-	public CancellationToken(ICancelable source)
-	{
-		this.source = source;
-	}
+        public CancellationToken(ICancelable source)
+        {
+            this.source = source;
+        }
 
-	public bool IsCancellationRequested
-	{
-		get
-		{
-			return source != null && source.IsCanceled;
-		}
-	}
+        public bool IsCancellationRequested
+        {
+            get
+            {
+                return source != null && source.IsCanceled;
+            }
+        }
 
-	public void ThrowIfCancellationRequested()
-	{
-		if (IsCancellationRequested)
-		{
-			throw new OperationCanceledException();
-		}
-	}
+        public void ThrowIfCancellationRequested()
+        {
+            if (IsCancellationRequested)
+            {
+                throw new OperationCanceledException();
+            }
+        }
+    }
+
 }
