@@ -1,16 +1,62 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using LightRx;
 using LightRx.Unity;
 
-public class PlayTest : MonoBehaviour {
+public class TestFromCoroutine : MonoBehaviour{
 
-	// Use this for initialization
-	void Start ()
+	void Start()
 	{
-		StartCoroutine(TestWhenAll());
+		
 	}
+	
+	public IEnumerator TestNormalUseage() {
+		// Use the Assert class to test conditions.
+		// yield to skip a frame
+		bool finish = false;
+
+		var cancel = Observable.FromCoroutine<int>(TestCoroutine)
+			.Subscribe(val =>
+			{
+				Debug.Log("got val:" + val);
+			},
+			() =>
+			{
+				Debug.Log("completed");
+				finish = true;
+			}
+			);
+
+		int i = 0;
+		while (!finish && i < 3000)
+		{
+			i++;
+
+			if (i > 500)
+			{
+				Debug.Log("i > 500, cancel it");
+				cancel.Dispose();
+			}
+			
+			yield return null;	
+		}
+		
+	}
+
+	private IEnumerator TestCoroutine(IObserver<int> observer, CancellationToken cancellationToken)
+	{
+		int i = 0;
+		while (!cancellationToken.IsCancellationRequested)
+		{
+			observer.OnNext(i++);
+			yield return new WaitForSeconds(1f);
+		}
+		
+		observer.OnComplete();
+	}
+
+
 	
 	public IEnumerator TestWhenAll()
 	{
@@ -36,17 +82,17 @@ public class PlayTest : MonoBehaviour {
 		});
 
 		int k = 0;
-		while (!succ && k < 30)
+		while (!succ && k < 200)
 		{
 			k++;
 			Debug.Log("k:" + k);
 			yield return null;
 		}
 
-		cancel.Dispose();
+//		cancel.Dispose();
 		Debug.Log("finish");
 	}
-	
+
 	IEnumerator TestO1(IObserver<string> ob, CancellationToken cancellationToken)
 	{
 		int i = 0;
@@ -58,7 +104,7 @@ public class PlayTest : MonoBehaviour {
 
 			if (i == 50)
 			{
-				ob.OnError(new System.Exception("A throw exception"));
+				ob.OnError(new Exception("A throw exception"));
 				yield break;
 			}
 
