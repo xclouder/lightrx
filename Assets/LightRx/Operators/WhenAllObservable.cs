@@ -27,7 +27,6 @@ namespace LightRx
 		private class InnerWhenAllObserver : OperatorObserverBase<T[], T[]>
 		{
 			private readonly IObservable<T>[] _sources;
-			private readonly IObserver<T[]> _observer;
 	
 			private T[] _values;
 			private int _length;
@@ -36,7 +35,6 @@ namespace LightRx
 			public InnerWhenAllObserver(IObservable<T>[] sources, IObserver<T[]> observer, IDisposable cancel) : base(observer, cancel)
 			{
 				_sources = sources;
-				_observer = observer;
 			}
 	
 			public override void OnNext(T[] value)
@@ -48,7 +46,7 @@ namespace LightRx
 			{
 				try
 				{
-					_observer.OnComplete();
+					Observer.OnComplete();
 				}
 				finally 
 				{
@@ -60,11 +58,10 @@ namespace LightRx
 			{
 				try
 				{
-					_observer.OnError(error);
+					Observer.OnError(error);
 				}
 				finally 
 				{
-					//TODO here the Dispose is SingleAssignmentDisposable, not CompositeDisposable, any problem?
 					Dispose();
 				}
 			}
@@ -76,7 +73,7 @@ namespace LightRx
 				if (_length == 0)
 				{
 					OnNext(new T[0]);
-					try { _observer.OnComplete(); } finally { Dispose(); }
+					try { Observer.OnComplete(); } finally { Dispose(); }
 					
 					return Disposable.Empty;
 				}
@@ -93,7 +90,8 @@ namespace LightRx
 					
 					disposable.Add(d);
 				}
-				
+
+				_cancel = disposable;
 				return disposable;
 			}
 			

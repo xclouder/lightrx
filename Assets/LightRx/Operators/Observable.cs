@@ -32,7 +32,16 @@ namespace LightRx
         {
             return new ContinueWithObservable<T,TR>(source, selector);
         }
+
+        public static IObservable<T> Race<T>(RaceMode mode, params IObservable<T>[] observables)
+        {
+            return new RaceObservable<T>(mode, observables);
+        }
 	
+        public static IObservable<T> Race<T>(params IObservable<T>[] observables)
+        {
+            return Race(RaceMode.CompleteOrError, observables);
+        }
     }
 
 }
