@@ -146,7 +146,8 @@ namespace LightRx
 				if (!_isCompleted)
 				{
 					_isCompleted = true;
-
+					
+					_parent.OnNext(_lastSeenVal);
 					_parent.OnComplete();
 					    
 				}

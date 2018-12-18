@@ -3,8 +3,24 @@
   <component name="ContentModelStore">
     <e p="C:\Users\damoncai\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_LightRx.952197612.00" t="ExcludeRecursive" />
     <e p="H:\lightrx" t="IncludeRecursive">
-      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets\Examples" t="Include">
+        <e p="ContinueWith" t="Include">
+          <e p="TestContinueWith.cs" t="Include" />
+        </e>
+        <e p="FromCoroutine" t="Include">
+          <e p="TestFromCoroutine.cs" t="Include" />
+        </e>
+        <e p="FromThread" t="Include">
+          <e p="TestFromThread.cs" t="Include" />
+        </e>
+        <e p="Race" t="Include">
+          <e p="TestRace.cs" t="Include" />
+        </e>
+        <e p="WWW" t="Include">
+          <e p="TestWWW.cs" t="Include" />
+        </e>
+      </e>
       <e p="Assets\lightrx" t="Include">
         <e p="Core" t="Include">
           <e p="IObservable.cs" t="Include" />
@@ -28,6 +44,7 @@
           <e p="Observable.cs" t="Include" />
           <e p="OperatorObservableBase.cs" t="Include" />
           <e p="OperatorObserverBase.cs" t="Include" />
+          <e p="RaceObservable.cs" t="Include" />
           <e p="SelectObservable.cs" t="Include" />
           <e p="WhenAllObservable.cs" t="Include" />
           <e p="WhereObservable.cs" t="Include" />
@@ -39,23 +56,16 @@
         <e p="UnityBridge" t="Include">
           <e p="Observable.Ext.cs" t="Include" />
           <e p="Observable.Unity.cs" t="Include" />
+          <e p="ObservableWWW.cs" t="Include" />
           <e p="Operators" t="Include">
             <e p="FromCoroutineObservable.cs" t="Include" />
             <e p="FromSubThreadObservable.cs" t="Include" />
+            <e p="IProgress.cs" t="Include" />
           </e>
           <e p="Scheduler" t="Include">
             <e p="MainThreadDispatcher.cs" t="Include" />
           </e>
         </e>
-      </e>
-      <e p="Assets\Tests" t="Include">
-        <e p="Editor" t="Include">
-          <e p="Test.cs" t="Include" />
-        </e>
-        <e p="PlayTest.cs" t="Include" />
-        <e p="TestContinueWith.cs" t="Include" />
-        <e p="TestFromCoroutine.cs" t="Include" />
-        <e p="TestFromThread.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="LightRx.sln" t="IncludeFlat" />
