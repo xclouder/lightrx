@@ -8,6 +8,16 @@ namespace LightRx
 
     public static partial class Observable {
 
+        public static IObservable<T> Create<T>(Func<IObserver<T>, IDisposable> subscribe)
+        {
+            return new CreateObservable<T>(subscribe);
+        }
+        
+        public static IObservable<T> Create<TState, T>(TState state, Func<TState, IObserver<T>, IDisposable> subscribe)
+        {
+            return new CreateObservable<TState,T>(state, subscribe);
+        }
+        
         public static IObservable<T> Where<T>(this IObservable<T> source, Func<T, bool> whereFunc)
         {
             return new WhereObservable<T>(source, whereFunc);
