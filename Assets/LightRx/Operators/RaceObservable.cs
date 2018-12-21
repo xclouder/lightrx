@@ -14,26 +14,26 @@ namespace LightRx
 	
 	public class RaceObservable<T> : IObservable<T> {
 
-		private RaceMode _raceMode = RaceMode.CompleteOrError;
+		//private RaceMode _raceMode = RaceMode.CompleteOrError;
 		private readonly IObservable<T>[] _observables;
 		
 	    public RaceObservable(RaceMode raceMode, params IObservable<T>[] observables)
 	    {
-		    _raceMode = raceMode;
+		    //_raceMode = raceMode;
 		    _observables = observables;
 	    }
 	    
 	    public IDisposable Subscribe(IObserver<T> observer)
 	    {
 		    var cancel = new SingleAssignmentDisposable();
-		    var innerObserver = new InnerRaceObserver<T>(_observables, observer, cancel);
+		    var innerObserver = new InnerRaceObserver(_observables, observer, cancel);
 	
 		    cancel.Disposable = innerObserver.Run();
 	
 		    return cancel;
 	    }
 
-	    private class InnerRaceObserver<T> : OperatorObserverBase<T, T>
+	    private class InnerRaceObserver : OperatorObserverBase<T, T>
 	    {
 		    private readonly IObservable<T>[] _sources;
 		    private T _lastSeenVal;
@@ -59,7 +59,7 @@ namespace LightRx
 			    for (int index = 0; index < _sources.Length; index++)
 			    {
 				    var source = _sources[index];
-				    var observer = new RaceCollectionObserver<T>(this, index);
+				    var observer = new RaceCollectionObserver(this, index);
 				    var d = source.Subscribe(observer);
 					
 				    disposable.Add(d);
@@ -119,18 +119,18 @@ namespace LightRx
 		    
 	    }
 
-		private class RaceCollectionObserver<T> : IObserver<T>
+		private class RaceCollectionObserver : IObserver<T>
 		{
 
-			private readonly InnerRaceObserver<T> _parent;
-			private readonly int _index;
+			private readonly InnerRaceObserver _parent;
+			//private readonly int _index;
 			private bool _isCompleted = false;
 			private T _lastSeenVal;
 			
-			public RaceCollectionObserver(InnerRaceObserver<T> parent, int index)
+			public RaceCollectionObserver(InnerRaceObserver parent, int index)
 			{
 				_parent = parent;
-				_index = index;
+				//_index = index;
 			}
 			
 			public void OnNext(T value)
