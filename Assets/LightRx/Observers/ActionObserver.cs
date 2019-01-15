@@ -19,7 +19,10 @@ namespace LightRx
 	
         public void OnNext(T value)
         {
-            _onNextAction(value);
+            if (_onNextAction != null)
+            {
+                _onNextAction(value);    
+            }
         }
 
         public void OnComplete()
