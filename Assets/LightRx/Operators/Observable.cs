@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework.Internal.Commands;
 using UnityEngine;
+using Unit = LightRx.Unit;
 
 namespace LightRx
 {
@@ -52,6 +54,29 @@ namespace LightRx
         {
             return Race(RaceMode.CompleteOrError, observables);
         }
+
+        public delegate void OnActionCompleteDelegate();
+        public delegate void DoActionDelegate(OnActionCompleteDelegate onComplete);
+        public static IObservable<Unit> FromAtion(DoActionDelegate actionDelegate)
+        {
+            return Observable.Create<Unit>((observer) =>
+            {
+                actionDelegate(() =>
+                {
+                    observer.OnNext(Unit.Default);
+                    observer.OnComplete();
+                });
+                
+                //not support cancel
+                return Disposable.Empty;
+            });
+        }
+
+        public static IObservable<Unit> ContinueWithAction(this IObservable<Unit> source, DoActionDelegate actionDelegate)
+        {
+            return source.ContinueWith<Unit, Unit>((v) => { return Observable.FromAtion(actionDelegate); });
+        }
+
     }
 
 }
